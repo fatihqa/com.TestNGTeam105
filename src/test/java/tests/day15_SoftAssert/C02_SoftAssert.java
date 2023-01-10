@@ -12,7 +12,7 @@ import java.util.*;
 
 public class C02_SoftAssert {
 
-    @Test(groups = {"minireg1","minireg2"})
+    @Test
     public void test01(){
         // 1. “http://zero.webappsecurity.com/” Adresine gidin
         Driver.getDriver().get("http://zero.webappsecurity.com/");
@@ -51,7 +51,7 @@ public class C02_SoftAssert {
         List<String> actualOptionsListesiStr= new ArrayList<>();
 
         for (WebElement each: optionsElementListesi
-             ) {
+        ) {
             actualOptionsListesiStr.add(each.getText());
         }
         String[] arr={"Select One", "Australia (dollar)", "Canada (dollar)","Switzerland (franc)","China (yuan)","Denmark (krone)","Eurozone (euro)","Great Britain (pound)","Hong Kong (dollar)","Japan (yen)","Mexico (peso)","Norway (krone)","New Zealand (dollar)","Sweden (krona)","Singapore (dollar)","Thailand (baht)"};

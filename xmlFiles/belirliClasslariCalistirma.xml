@@ -3,7 +3,6 @@
 <suite name="Classlari calistirma">
     
     <test name="Istenen class'lari calistirma">
-        
         <classes>
             <class name="tests.day15_SoftAssert.C01_SoftAssert"></class>
             <class name="tests.day16_SmokeTests.C03_SwitchingWindows"></class>

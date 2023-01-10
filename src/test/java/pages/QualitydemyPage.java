@@ -7,8 +7,12 @@ import utilities.Driver;
 
 public class QualitydemyPage {
 
+    public WebElement cookie;
+
     public QualitydemyPage(){
+        
         PageFactory.initElements(Driver.getDriver(),this);
+
     }
 
     @FindBy(xpath = "//*[text()='Log in']")
@@ -25,6 +29,7 @@ public class QualitydemyPage {
 
     @FindBy(linkText = "My courses")
     public WebElement basariliGirisCoursesLinki;
+
 
 
 }

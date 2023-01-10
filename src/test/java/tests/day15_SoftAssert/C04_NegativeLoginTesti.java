@@ -16,8 +16,11 @@ public class C04_NegativeLoginTesti {
 
     @Test
     public void yanlisEmailTesti(){
+        if (qualitydemyPage.cookie.isDisplayed()){
+            qualitydemyPage.cookie.click();
+        }
         ReusableMethods.bekle(3);
-        qualitydemyPage= new QualitydemyPage();
+        QualitydemyPage qualitydemyPage= new QualitydemyPage();
         Driver.getDriver().get("https://www.qualitydemy.com/");
         qualitydemyPage.ilkLoginLinki.click();
         qualitydemyPage.kullaniciEmailKutusu.sendKeys("mehmet@abc.com");
@@ -31,8 +34,8 @@ public class C04_NegativeLoginTesti {
 
     @Test
     public void yanlisPasswordTesti(){
+        QualitydemyPage qualitydemyPage= new QualitydemyPage();
         Driver.getDriver().get("https://www.qualitydemy.com/");
-        qualitydemyPage= new QualitydemyPage();
         qualitydemyPage.ilkLoginLinki.click();
         qualitydemyPage.kullaniciEmailKutusu.sendKeys("user_1106147@login.com");
         qualitydemyPage.passwordKutusu.sendKeys("123456");
@@ -46,8 +49,8 @@ public class C04_NegativeLoginTesti {
 
     @Test
     public void yanlisEmailYanlisPasswordTesti(){
+        QualitydemyPage qualitydemyPage= new QualitydemyPage();
         Driver.getDriver().get("https://www.qualitydemy.com/");
-        qualitydemyPage= new QualitydemyPage();
         qualitydemyPage.ilkLoginLinki.click();
         qualitydemyPage.kullaniciEmailKutusu.sendKeys("mehmet@abc.com");
         qualitydemyPage.passwordKutusu.sendKeys("123456");
